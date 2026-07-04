@@ -10,7 +10,7 @@
 <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon-navy-180.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Space+Mono:wght@400;700&family=Newsreader:ital,opsz,wght@1,6..72,400;1,6..72,500&display=swap" rel="stylesheet">
 <style>
   :root {
     --navy: #101c33;
@@ -58,7 +58,7 @@
   }
   .hero .wrap { position: relative; }
   .hero h1 { font-size: clamp(2rem, 5vw, 3.2rem); line-height: 1.15; max-width: 800px; margin: 0 auto 20px; position: relative; }
-  .hero h1 em { color: var(--gold-light); font-style: normal; border-bottom: 3px solid var(--gold); padding-bottom: 2px; }
+  .hero h1 em { font-family: 'Newsreader', serif; font-style: italic; font-weight: 500; color: var(--gold-light); border-bottom: 3px solid var(--gold); padding-bottom: 2px; }
   .hero p { font-size: 1.15rem; color: #cfd6e4; max-width: 640px; margin: 0 auto 36px; }
   .btn { display: inline-block; padding: 14px 32px; border-radius: 6px; text-decoration: none; font-weight: 600; font-size: 1rem; }
   .btn-gold { background: var(--gold); color: var(--navy); }
@@ -67,7 +67,7 @@
   .btn-ghost:hover { border-color: var(--gold-light); color: var(--gold-light); }
 
   section { padding: 80px 0; }
-  .kicker { text-transform: uppercase; letter-spacing: 2px; font-size: .8rem; font-weight: 700; color: var(--gold); margin-bottom: 10px; display: flex; align-items: center; gap: 12px; }
+  .kicker { font-family: 'Space Mono', monospace; text-transform: uppercase; letter-spacing: 2px; font-size: .8rem; font-weight: 700; color: var(--gold); margin-bottom: 10px; display: flex; align-items: center; gap: 12px; }
   .kicker::before { content: ''; width: 36px; height: 3px; background: var(--gold); border-radius: 2px; }
   .band .kicker, .contact .kicker { justify-content: center; }
   .band .kicker::after, .contact .kicker::after { content: ''; width: 36px; height: 3px; background: var(--gold); border-radius: 2px; }
