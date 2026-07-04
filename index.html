@@ -5,6 +5,12 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>AI Powered Church — AI Innovation Plans & Training for Ministry</title>
 <meta name="description" content="We develop AI innovation plans and solutions for churches, ministries, and non-profits, then train your people to use them.">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-navy-32.png">
+<link rel="icon" type="image/png" sizes="512x512" href="assets/favicon-navy-512.png">
+<link rel="apple-touch-icon" sizes="180x180" href="assets/favicon-navy-180.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
 <style>
   :root {
     --navy: #101c33;
@@ -18,12 +24,15 @@
   * { margin: 0; padding: 0; box-sizing: border-box; }
   html { scroll-behavior: smooth; }
   body { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; color: var(--navy); background: var(--cream); line-height: 1.6; }
+  h1, h2, h3, .btn, .kicker, .num { font-family: 'Space Grotesk', 'Segoe UI', system-ui, sans-serif; }
   .wrap { max-width: 1080px; margin: 0 auto; padding: 0 24px; }
 
   header { background: var(--navy); color: var(--white); position: sticky; top: 0; z-index: 10; }
   nav { display: flex; align-items: center; justify-content: space-between; padding: 18px 0; }
-  .logo { font-weight: 700; font-size: 1.15rem; letter-spacing: .5px; color: var(--white); text-decoration: none; }
-  .logo span { color: var(--gold); }
+  .logo { display: flex; align-items: center; gap: 14px; font-family: 'Space Grotesk', 'Segoe UI', system-ui, sans-serif; color: var(--white); text-decoration: none; }
+  .logo .logo-ai { color: var(--gold); font-weight: 700; font-size: 1.5rem; letter-spacing: 1px; line-height: 1; }
+  .logo .logo-div { width: 1px; height: 26px; background: rgba(207,214,228,.45); }
+  .logo .logo-word { font-weight: 600; font-size: .85rem; letter-spacing: 3px; text-transform: uppercase; line-height: 1.35; }
   nav ul { display: flex; gap: 28px; list-style: none; }
   nav a { color: #cfd6e4; text-decoration: none; font-size: .95rem; }
   nav a:hover { color: var(--gold-light); }
@@ -82,7 +91,7 @@
 <header>
   <div class="wrap">
     <nav>
-      <a class="logo" href="#">AI Powered <span>Church</span></a>
+      <a class="logo" href="#"><span class="logo-ai">AI</span><span class="logo-div"></span><span class="logo-word">Powered Church</span></a>
       <ul>
         <li><a href="#what-we-do">What We Do</a></li>
         <li><a href="#how-it-works">How It Works</a></li>
@@ -113,31 +122,9 @@
     </g>
   </svg>
   <div class="wrap">
-    <svg class="chip" width="150" height="150" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-      <defs>
-        <radialGradient id="glow" cx="50%" cy="50%" r="50%">
-          <stop offset="0%" stop-color="#e3c67f" stop-opacity=".9"/>
-          <stop offset="60%" stop-color="#c9a24b" stop-opacity=".25"/>
-          <stop offset="100%" stop-color="#c9a24b" stop-opacity="0"/>
-        </radialGradient>
-      </defs>
-      <circle cx="100" cy="100" r="95" fill="url(#glow)"/>
-      <g stroke="#e3c67f" stroke-width="2.5" fill="none" stroke-linecap="round">
-        <path d="M100 35 v20 M65 42 l12 18 M135 42 l-12 18"/>
-        <path d="M100 165 v-20 M65 158 l12-18 M135 158 l-12-18"/>
-        <path d="M35 100 h20 M165 100 h-20"/>
-        <path d="M42 65 l18 12 M158 65 l-18 12 M42 135 l18-12 M158 135 l-18-12"/>
-      </g>
-      <g fill="#e3c67f">
-        <circle cx="100" cy="33" r="4"/><circle cx="100" cy="167" r="4"/>
-        <circle cx="33" cy="100" r="4"/><circle cx="167" cy="100" r="4"/>
-        <circle cx="63" cy="40" r="3"/><circle cx="137" cy="40" r="3"/>
-        <circle cx="63" cy="160" r="3"/><circle cx="137" cy="160" r="3"/>
-        <circle cx="40" cy="63" r="3"/><circle cx="160" cy="63" r="3"/>
-        <circle cx="40" cy="137" r="3"/><circle cx="160" cy="137" r="3"/>
-      </g>
-      <rect x="62" y="62" width="76" height="76" rx="14" fill="#101c33" stroke="#c9a24b" stroke-width="3"/>
-      <text x="100" y="112" text-anchor="middle" font-family="Segoe UI, sans-serif" font-size="34" font-weight="700" fill="#e3c67f">AI</text>
+    <svg class="chip" width="132" height="132" viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <rect x="10" y="10" width="236" height="236" rx="54" fill="#101c33" stroke="#c9a24b" stroke-width="8"/>
+      <text x="128" y="166" text-anchor="middle" font-family="'Space Grotesk', 'Segoe UI', sans-serif" font-size="108" font-weight="700" fill="#e3c67f">AI</text>
     </svg>
     <h1>Technology changes. <em>The mission doesn't.</em></h1>
     <p>We develop AI innovation plans and solutions for churches, ministries, and non-profits — then train your people to use them with confidence.</p>
