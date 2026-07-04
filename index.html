@@ -29,10 +29,9 @@
 
   header { background: var(--navy); color: var(--white); position: sticky; top: 0; z-index: 10; }
   nav { display: flex; align-items: center; justify-content: space-between; padding: 18px 0; }
-  .logo { display: flex; align-items: center; gap: 14px; font-family: 'Space Grotesk', 'Segoe UI', system-ui, sans-serif; color: var(--white); text-decoration: none; }
-  .logo .logo-ai { color: var(--gold); font-weight: 700; font-size: 1.5rem; letter-spacing: 1px; line-height: 1; }
-  .logo .logo-div { width: 1px; height: 26px; background: rgba(207,214,228,.45); }
-  .logo .logo-word { font-weight: 600; font-size: .85rem; letter-spacing: 3px; text-transform: uppercase; line-height: 1.35; }
+  .logo { display: flex; align-items: center; gap: 12px; font-family: 'Space Grotesk', 'Segoe UI', system-ui, sans-serif; color: var(--white); text-decoration: none; }
+  .logo .logo-chip { display: flex; align-items: center; justify-content: center; width: 36px; height: 36px; border-radius: 9px; background: var(--navy); border: 2px solid var(--gold); font-weight: 700; font-size: 16px; letter-spacing: -.04em; color: var(--gold-light); box-shadow: 0 0 16px rgba(201,162,75,.35); }
+  .logo .logo-word { font-weight: 600; font-size: .95rem; letter-spacing: .05em; text-transform: uppercase; line-height: 1.35; }
   nav ul { display: flex; gap: 28px; list-style: none; }
   nav a { color: #cfd6e4; text-decoration: none; font-size: .95rem; }
   nav a:hover { color: var(--gold-light); }
@@ -42,6 +41,21 @@
   .hero::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, transparent, var(--gold), transparent); }
   .hero .net { position: absolute; inset: 0; width: 100%; height: 100%; opacity: .35; pointer-events: none; }
   .hero .chip { display: block; margin: 0 auto 26px; filter: drop-shadow(0 0 24px rgba(201,162,75,.45)); }
+  .lockup { display: flex; align-items: center; justify-content: center; gap: 22px; font-family: 'Space Grotesk', 'Segoe UI', system-ui, sans-serif; }
+  .hero .lockup { margin: 0 auto 40px; position: relative; }
+  .hero .lockup::before { content: ''; position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); width: 340px; height: 220px; background: radial-gradient(ellipse 60% 72% at 50% 44%, rgba(227,198,127,.16), rgba(16,28,51,0) 62%); pointer-events: none; }
+  .lockup .lockup-ai { font-weight: 700; font-size: 72px; color: var(--gold-light); line-height: .8; letter-spacing: -.04em; position: relative; }
+  .lockup .lockup-div { width: 2px; height: 64px; background: linear-gradient(180deg, transparent, #3a4a72, transparent); position: relative; }
+  .lockup .lockup-word { font-weight: 600; font-size: 27px; letter-spacing: .05em; text-transform: uppercase; color: var(--cream); line-height: 1.22; text-align: left; position: relative; }
+  footer .lockup { gap: 12px; margin-bottom: 14px; }
+  footer .lockup .lockup-ai { font-size: 30px; }
+  footer .lockup .lockup-div { height: 28px; }
+  footer .lockup .lockup-word { font-size: 12px; color: #cfd6e4; }
+  @media (max-width: 640px) {
+    .lockup .lockup-ai { font-size: 52px; }
+    .lockup .lockup-div { height: 48px; }
+    .lockup .lockup-word { font-size: 20px; }
+  }
   .hero .wrap { position: relative; }
   .hero h1 { font-size: clamp(2rem, 5vw, 3.2rem); line-height: 1.15; max-width: 800px; margin: 0 auto 20px; position: relative; }
   .hero h1 em { color: var(--gold-light); font-style: normal; border-bottom: 3px solid var(--gold); padding-bottom: 2px; }
@@ -91,7 +105,7 @@
 <header>
   <div class="wrap">
     <nav>
-      <a class="logo" href="#"><span class="logo-ai">AI</span><span class="logo-div"></span><span class="logo-word">Powered Church</span></a>
+      <a class="logo" href="#"><span class="logo-chip">AI</span><span class="logo-word">Powered Church</span></a>
       <ul>
         <li><a href="#what-we-do">What We Do</a></li>
         <li><a href="#how-it-works">How It Works</a></li>
@@ -122,10 +136,11 @@
     </g>
   </svg>
   <div class="wrap">
-    <svg class="chip" width="132" height="132" viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-      <rect x="10" y="10" width="236" height="236" rx="54" fill="#101c33" stroke="#c9a24b" stroke-width="8"/>
-      <text x="128" y="166" text-anchor="middle" font-family="'Space Grotesk', 'Segoe UI', sans-serif" font-size="108" font-weight="700" fill="#e3c67f">AI</text>
-    </svg>
+    <div class="lockup" aria-label="AI Powered Church">
+      <span class="lockup-ai">AI</span>
+      <span class="lockup-div"></span>
+      <span class="lockup-word">Powered<br>Church</span>
+    </div>
     <h1>Technology changes. <em>The mission doesn't.</em></h1>
     <p>We develop AI innovation plans and solutions for churches, ministries, and non-profits — then train your people to use them with confidence.</p>
     <a class="btn btn-gold" href="#contact">Start a Conversation</a>
@@ -178,6 +193,11 @@
 
 <footer>
   <div class="wrap">
+    <div class="lockup" aria-hidden="true">
+      <span class="lockup-ai">AI</span>
+      <span class="lockup-div"></span>
+      <span class="lockup-word">Powered<br>Church</span>
+    </div>
     &copy; 2026 AI Powered Church &middot; <a href="mailto:info@aipoweredchurch.com">Contact</a>
   </div>
 </footer>
