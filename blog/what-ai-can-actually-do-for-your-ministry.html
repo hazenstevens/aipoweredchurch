@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>What AI Can Actually Do for Your Ministry — AI Powered Church</title>
+<meta name="description" content="Cut through the hype. Practical ways churches and non-profits are using AI right now to reach more people and lighten the load on staff and volunteers.">
+<link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon-navy-32.png">
+<link rel="apple-touch-icon" sizes="180x180" href="../assets/favicon-navy-180.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Space+Mono:wght@400;700&family=Newsreader:ital,opsz,wght@1,6..72,400;1,6..72,500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #101c33;
+    --navy-soft: #1b2a4a;
+    --gold: #c9a24b;
+    --gold-light: #e3c67f;
+    --cream: #faf7f0;
+    --slate: #5b6577;
+    --white: #ffffff;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; color: var(--navy); background: var(--cream); line-height: 1.7; }
+  h1, h2, h3 { font-family: 'Space Grotesk', 'Segoe UI', system-ui, sans-serif; }
+  .wrap { max-width: 720px; margin: 0 auto; padding: 0 24px; }
+
+  header { background: var(--navy); color: var(--white); position: sticky; top: 0; z-index: 10; }
+  nav { display: flex; align-items: center; justify-content: space-between; padding: 18px 0; max-width: 1080px; margin: 0 auto; padding-left: 24px; padding-right: 24px; }
+  .logo { display: flex; align-items: center; gap: 12px; font-family: 'Space Grotesk', sans-serif; color: var(--white); text-decoration: none; }
+  .logo .logo-chip { display: flex; align-items: center; justify-content: center; width: 36px; height: 36px; border-radius: 9px; background: var(--navy); border: 2px solid var(--gold); font-weight: 700; font-size: 16px; letter-spacing: -.04em; color: var(--gold-light); box-shadow: 0 0 16px rgba(201,162,75,.35); }
+  .logo .logo-word { font-weight: 600; font-size: .95rem; letter-spacing: .05em; text-transform: uppercase; }
+  nav ul { display: flex; gap: 28px; list-style: none; }
+  nav ul a { color: #cfd6e4; text-decoration: none; font-size: .95rem; }
+  nav ul a:hover { color: var(--gold-light); }
+
+  .post-head { background: linear-gradient(160deg, var(--navy) 0%, var(--navy-soft) 100%); color: var(--white); padding: 64px 0; text-align: center; position: relative; }
+  .post-head::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, transparent, var(--gold), transparent); }
+  .post-head .date { font-family: 'Space Mono', monospace; font-size: .8rem; letter-spacing: 1.5px; text-transform: uppercase; color: var(--gold); }
+  .post-head h1 { font-size: clamp(1.7rem, 4vw, 2.5rem); line-height: 1.2; margin-top: 12px; }
+
+  article { padding: 56px 0 40px; }
+  article p { margin-bottom: 22px; color: #2a3448; }
+  article h2 { font-size: 1.45rem; margin: 40px 0 14px; }
+  article ul { margin: 0 0 22px 22px; color: #2a3448; }
+  article li { margin-bottom: 10px; }
+  .pull { font-family: 'Newsreader', serif; font-style: italic; font-size: 1.45rem; line-height: 1.45; color: var(--navy); border-left: 3px solid var(--gold); padding: 6px 0 6px 24px; margin: 34px 0; }
+
+  .cta { background: var(--navy); color: var(--white); text-align: center; padding: 56px 0; position: relative; }
+  .cta::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, transparent, var(--gold), transparent); }
+  .cta h2 { margin-bottom: 10px; }
+  .cta p { color: #cfd6e4; max-width: 520px; margin: 0 auto 26px; }
+  .btn { display: inline-block; padding: 14px 32px; border-radius: 6px; text-decoration: none; font-weight: 600; font-family: 'Space Grotesk', sans-serif; background: var(--gold); color: var(--navy); }
+  .btn:hover { background: var(--gold-light); }
+
+  .backlink { display: inline-block; margin-bottom: 26px; font-family: 'Space Mono', monospace; font-size: .8rem; letter-spacing: 1px; text-transform: uppercase; color: var(--slate); text-decoration: none; }
+  .backlink:hover { color: var(--gold); }
+
+  footer { background: var(--navy); color: #8f9ab0; text-align: center; padding: 28px 0; font-size: .85rem; border-top: 3px solid var(--gold); }
+  footer a { color: #cfd6e4; text-decoration: none; }
+  @media (max-width: 640px) { nav ul { display: none; } }
+</style>
+</head>
+<body>
+
+<header>
+  <nav>
+    <a class="logo" href="../"><span class="logo-chip">AI</span><span class="logo-word">Powered Church</span></a>
+    <ul>
+      <li><a href="../#what-we-do">What We Do</a></li>
+      <li><a href="../#how-it-works">How It Works</a></li>
+      <li><a href="./">Blog</a></li>
+      <li><a href="../#contact">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<section class="post-head">
+  <div class="wrap">
+    <span class="date">July 4, 2026</span>
+    <h1>What AI Can Actually Do for Your Ministry</h1>
+  </div>
+</section>
+
+<article>
+  <div class="wrap">
+    <a class="backlink" href="./">&larr; All posts</a>
+
+    <p>Every week brings a new headline about artificial intelligence — some breathless, some alarming. For pastors and ministry leaders, the noise can make it hard to answer a simple question: is any of this actually useful for us?</p>
+
+    <p>The honest answer is yes — not someday, but right now. Not by replacing the human heart of ministry, but by taking work off the plates of the people doing it.</p>
+
+    <div class="pull">AI should serve the ministry — not the other way around.</div>
+
+    <h2>Where AI helps today</h2>
+    <ul>
+      <li><strong>Communications.</strong> Turning one sermon into a week of social posts, a newsletter blurb, and a small-group discussion guide — in minutes instead of hours.</li>
+      <li><strong>Administration.</strong> Drafting volunteer schedules, meeting summaries, grant applications, and follow-up emails so staff can spend time with people instead of paperwork.</li>
+      <li><strong>Outreach.</strong> Answering common questions on your website, keeping visitor follow-up from slipping through the cracks, and helping newcomers find their next step.</li>
+      <li><strong>Care.</strong> Flagging when a regular attender hasn't been seen in a month, so a human being — not a machine — can reach out.</li>
+    </ul>
+
+    <h2>Where to start</h2>
+    <p>Don't start with tools. Start with the bottleneck. What's the task your team dreads most every week? What keeps your staff at the office after everyone else has gone home? That's where AI earns its keep first.</p>
+
+    <p>From there, the path is simple: pick one workflow, set it up well, train the people who'll use it, and let the win build confidence for the next one.</p>
+
+    <p>That's exactly the journey we walk with churches, ministries, and non-profits — assess, plan, build, and train, at your pace.</p>
+  </div>
+</article>
+
+<section class="cta">
+  <div class="wrap">
+    <h2>Ready to find your first win?</h2>
+    <p>Grab 30 minutes with us. We'll talk about where your ministry is and where AI could genuinely help — no jargon, no pressure.</p>
+    <a class="btn" href="https://calendly.com/hazen-stevens/30-minute-meeting-with-hazen" target="_blank" rel="noopener">Schedule Your Free Consultation</a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    &copy; 2026 AI Powered Church &middot; <a href="../#contact">Contact</a>
+  </div>
+</footer>
+
+</body>
+</html>

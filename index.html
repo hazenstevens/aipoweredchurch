@@ -88,6 +88,15 @@
   .band h2 { color: var(--white); }
   .band p { color: #cfd6e4; max-width: 620px; margin: 0 auto 32px; }
 
+  .blog-feature .post-card { display: block; background: var(--white); border-radius: 10px; padding: 34px 38px; max-width: 720px; box-shadow: 0 2px 12px rgba(16,28,51,.06); border-top: 4px solid var(--gold); text-decoration: none; color: var(--navy); transition: transform .2s ease, box-shadow .2s ease; }
+  .blog-feature .post-card:hover { transform: translateY(-4px); box-shadow: 0 8px 24px rgba(16,28,51,.12); }
+  .blog-feature .post-card .date { font-family: 'Space Mono', monospace; font-size: .75rem; letter-spacing: 1.5px; text-transform: uppercase; color: var(--gold); }
+  .blog-feature .post-card h3 { font-size: 1.4rem; margin: 8px 0; }
+  .blog-feature .post-card p { color: var(--slate); font-size: .97rem; }
+  .blog-feature .post-card .read { display: inline-block; margin-top: 14px; font-family: 'Space Grotesk', sans-serif; font-weight: 600; border-bottom: 2px solid var(--gold); }
+  .blog-feature .all-posts { display: inline-block; margin-top: 22px; font-family: 'Space Mono', monospace; font-size: .8rem; letter-spacing: 1px; text-transform: uppercase; color: var(--slate); text-decoration: none; }
+  .blog-feature .all-posts:hover { color: var(--gold); }
+
   .contact { text-align: center; }
   .contact .email { font-size: 1.25rem; font-weight: 600; color: var(--navy); text-decoration: none; border-bottom: 2px solid var(--gold); }
 
@@ -109,6 +118,7 @@
       <ul>
         <li><a href="#what-we-do">What We Do</a></li>
         <li><a href="#how-it-works">How It Works</a></li>
+        <li><a href="blog/">Blog</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
@@ -182,6 +192,16 @@
   </div>
 </section>
 
+<section id="blog" class="blog-feature" style="display:none;">
+  <div class="wrap">
+    <div class="kicker">From the Blog</div>
+    <h2>The latest from AI Powered Church</h2>
+    <p class="lead">Practical insights on putting AI to work in ministry.</p>
+    <div id="latest-post"></div>
+    <a class="all-posts" href="blog/">View all posts &rarr;</a>
+  </div>
+</section>
+
 <section id="contact" class="contact">
   <div class="wrap">
     <div class="kicker">Contact</div>
@@ -202,6 +222,26 @@
     &copy; 2026 AI Powered Church &middot; <a href="mailto:info@aipoweredchurch.com">Contact</a>
   </div>
 </footer>
+
+<script>
+fetch('blog/posts.json')
+  .then(r => r.json())
+  .then(posts => {
+    if (!posts.length) return;
+    posts.sort((a, b) => b.date.localeCompare(a.date));
+    const p = posts[0];
+    const d = new Date(p.date + 'T12:00:00');
+    const dateStr = d.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+    document.getElementById('latest-post').innerHTML =
+      '<a class="post-card" href="blog/' + p.slug + '.html">' +
+      '<span class="date">' + dateStr + '</span>' +
+      '<h3>' + p.title + '</h3>' +
+      '<p>' + p.excerpt + '</p>' +
+      '<span class="read">Read the post</span></a>';
+    document.getElementById('blog').style.display = '';
+  })
+  .catch(() => {});
+</script>
 
 </body>
 </html>

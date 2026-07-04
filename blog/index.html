@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blog — AI Powered Church</title>
+<meta name="description" content="Practical insights on AI for churches, ministries, and non-profits.">
+<link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon-navy-32.png">
+<link rel="apple-touch-icon" sizes="180x180" href="../assets/favicon-navy-180.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Space+Mono:wght@400;700&family=Newsreader:ital,opsz,wght@1,6..72,400;1,6..72,500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #101c33;
+    --navy-soft: #1b2a4a;
+    --gold: #c9a24b;
+    --gold-light: #e3c67f;
+    --cream: #faf7f0;
+    --slate: #5b6577;
+    --white: #ffffff;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; color: var(--navy); background: var(--cream); line-height: 1.6; }
+  h1, h2, h3 { font-family: 'Space Grotesk', 'Segoe UI', system-ui, sans-serif; }
+  .wrap { max-width: 800px; margin: 0 auto; padding: 0 24px; }
+
+  header { background: var(--navy); color: var(--white); position: sticky; top: 0; z-index: 10; }
+  nav { display: flex; align-items: center; justify-content: space-between; padding: 18px 0; max-width: 1080px; margin: 0 auto; padding-left: 24px; padding-right: 24px; }
+  .logo { display: flex; align-items: center; gap: 12px; font-family: 'Space Grotesk', sans-serif; color: var(--white); text-decoration: none; }
+  .logo .logo-chip { display: flex; align-items: center; justify-content: center; width: 36px; height: 36px; border-radius: 9px; background: var(--navy); border: 2px solid var(--gold); font-weight: 700; font-size: 16px; letter-spacing: -.04em; color: var(--gold-light); box-shadow: 0 0 16px rgba(201,162,75,.35); }
+  .logo .logo-word { font-weight: 600; font-size: .95rem; letter-spacing: .05em; text-transform: uppercase; }
+  nav ul { display: flex; gap: 28px; list-style: none; }
+  nav ul a { color: #cfd6e4; text-decoration: none; font-size: .95rem; }
+  nav ul a:hover { color: var(--gold-light); }
+
+  .page-head { background: linear-gradient(160deg, var(--navy) 0%, var(--navy-soft) 100%); color: var(--white); padding: 64px 0; text-align: center; position: relative; }
+  .page-head::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, transparent, var(--gold), transparent); }
+  .kicker { font-family: 'Space Mono', monospace; text-transform: uppercase; letter-spacing: 2px; font-size: .8rem; font-weight: 700; color: var(--gold); margin-bottom: 10px; display: flex; align-items: center; justify-content: center; gap: 12px; }
+  .kicker::before, .kicker::after { content: ''; width: 36px; height: 3px; background: var(--gold); border-radius: 2px; }
+  .page-head h1 { font-size: 2.4rem; }
+  .page-head p { color: #cfd6e4; max-width: 560px; margin: 12px auto 0; }
+
+  main { padding: 64px 0 80px; }
+  .post-card { display: block; background: var(--white); border-radius: 10px; padding: 32px 36px; margin-bottom: 24px; box-shadow: 0 2px 12px rgba(16,28,51,.06); border-top: 4px solid var(--gold); text-decoration: none; color: var(--navy); transition: transform .2s ease, box-shadow .2s ease; }
+  .post-card:hover { transform: translateY(-4px); box-shadow: 0 8px 24px rgba(16,28,51,.12); }
+  .post-card .date { font-family: 'Space Mono', monospace; font-size: .75rem; letter-spacing: 1.5px; text-transform: uppercase; color: var(--gold); }
+  .post-card h2 { font-size: 1.4rem; margin: 8px 0 8px; }
+  .post-card p { color: var(--slate); font-size: .97rem; }
+  .post-card .read { display: inline-block; margin-top: 14px; font-family: 'Space Grotesk', sans-serif; font-weight: 600; color: var(--navy); border-bottom: 2px solid var(--gold); }
+
+  footer { background: var(--navy); color: #8f9ab0; text-align: center; padding: 28px 0; font-size: .85rem; border-top: 3px solid var(--gold); }
+  footer a { color: #cfd6e4; text-decoration: none; }
+  @media (max-width: 640px) { nav ul { display: none; } }
+</style>
+</head>
+<body>
+
+<header>
+  <nav>
+    <a class="logo" href="../"><span class="logo-chip">AI</span><span class="logo-word">Powered Church</span></a>
+    <ul>
+      <li><a href="../#what-we-do">What We Do</a></li>
+      <li><a href="../#how-it-works">How It Works</a></li>
+      <li><a href="./">Blog</a></li>
+      <li><a href="../#contact">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<section class="page-head">
+  <div class="wrap">
+    <div class="kicker">The Blog</div>
+    <h1>Practical AI for Ministry</h1>
+    <p>Ideas, walkthroughs, and encouragement for churches, ministries, and non-profits putting AI to work.</p>
+  </div>
+</section>
+
+<main>
+  <div class="wrap" id="post-list">
+    <noscript>Enable JavaScript to view the post list, or email us at info@aipoweredchurch.com.</noscript>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    &copy; 2026 AI Powered Church &middot; <a href="../#contact">Contact</a>
+  </div>
+</footer>
+
+<script>
+fetch('posts.json')
+  .then(r => r.json())
+  .then(posts => {
+    posts.sort((a, b) => b.date.localeCompare(a.date));
+    document.getElementById('post-list').innerHTML = posts.map(p => {
+      const d = new Date(p.date + 'T12:00:00');
+      const dateStr = d.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+      return '<a class="post-card" href="' + p.slug + '.html">' +
+        '<span class="date">' + dateStr + '</span>' +
+        '<h2>' + p.title + '</h2>' +
+        '<p>' + p.excerpt + '</p>' +
+        '<span class="read">Read post</span></a>';
+    }).join('');
+  });
+</script>
+
+</body>
+</html>
